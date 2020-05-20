@@ -14,25 +14,27 @@
                 <img src="logo.png" alt="logo" />
             </div>
         </header>
+            <!-- <div class="select">
+                <label for="genre">Choose a genre:</label>
 
-
-
+                <select id="selected-genre">
+                  <option value="pop">Pop</option>
+                  <option value="rock">Rock</option>
+                  <option value="metal">Metal</option>
+                  <option value="jazz">Jazz</option>
+                </select>
+            </div> -->
             <div class="cds-container container">
                 <!-- Disco ad esempio -->
                 <script id="cd-template" type="text/x-handlebars-template">
                     <div class="cd">
-                        <img class="copertina" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
-                        <h3>{{cd-album}}</h3>
-                        <span class="genre">{{genere}}</span>
-                        <span class="author">{{artistat}}</span>
-                        <span class="year">{{anno}}</span>
-                    </div>
-                    <div class="cd">
-                        <img class="copertina" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg" alt="">
-                        <h3>{{cd-album}}</h3>
-                        <span class="genre">{{genere}}</span>
-                        <span class="author">{{artistat}}</span>
-                        <span class="year">{{anno}}</span>
+                        <div>
+                            <img class="album" src="{{copertina}}" alt="">
+                        </div>
+                        <h3>{{titolo}}</h3>
+                        <div class="author">{{artista}}</div>
+                        <div class="genre">{{genere}}</div>
+                        <div class="year">{{anno}}</div>
                     </div>
                 </script>
             </div>

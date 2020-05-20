@@ -36,7 +36,7 @@ header img {
 
 .cd {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     flex-basis: 200px;
@@ -54,15 +54,30 @@ header img {
 .cd h3 {
     margin: 20px 0;
     color: white;
-    font-size: 22px;
     text-transform: uppercase;
 }
 
-.cd span.author {
+.cd div.author {
     color: grey;
     font-size: 20px;
 }
 
-.cd span.year {
+.cd div.year {
     color: grey;
+}
+
+.select {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.select label {
+    color: white;
+    margin-right: 10px;
+}
+
+#selected-genre {
+    width: 100px;
+    border-radius: 10px;
+    background-color: lightgrey;
 }

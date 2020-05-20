@@ -1,36 +1,38 @@
 $(document).ready(function(){
+
     //
     $.ajax ({
         url : 'https://flynn.boolean.careers/exercises/api/array/music',
         method : 'GET',
         success: function(data) {
             var cd = data.response;
-            //console.log(cd);
+            console.log(cd);
+            var source = $('#cd-template').html();
+            var template = Handlebars.compile(source);
+            //console.log(source);
 
-            var primo_artista = cd[0].author;
             //console.log(primo_artista);
             for (var i = 0; i < cd.length; i++) {
-                var singolo_artista = cd[i].author;
+                var album_corrente = cd[i];
                 //console.log(singolo_album);
-                if () {
-                    var source = $('#cd-template').html();
-                    var template = Handlebars.compile(source);
-
-                    //console.log(source);
 
                      var card_cd = {
-                         artista: singolo_artista,
-                    //     // poster : ,
-                    //     // album : ,
-                    //     // genre : ,
-                    //     // year : ,
-                    //
+                        copertina: album_corrente.poster,
+                        artista: album_corrente.author,
+                        genere : album_corrente.genre,
+                        titolo : album_corrente.title,
+                        anno : album_corrente.year,
+
                      }
 
                      var html_finale = template(card_cd);
                      $('.cds-container').append(html_finale)
-                }
             }
+
+            // $('#selected-genre').change(function(){
+            //
+            // })
+
         },
         error : function() {
             alert('error');
